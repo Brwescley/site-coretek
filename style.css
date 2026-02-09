@@ -189,12 +189,54 @@ footer { background: linear-gradient(to top, #020205, rgba(5, 5, 15, 0.95)); pad
 .reveal { opacity: 0; transform: translateY(80px); transition: 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000); }
 .reveal.active { opacity: 1; transform: translateY(0); }
 
-/* Mobile Adjustments */
+/* --- MOBILE ADJUSTMENTS (CORREÇÃO PARA CELULAR) --- */
 @media (max-width: 900px) {
+    /* Ajuste Principal: Empurra o título para baixo para não ficar atrás do menu */
+    .hero {
+        padding-top: 160px; /* Dá espaço para o menu */
+        align-items: flex-start; /* Alinha o texto no topo, e não no meio */
+        min-height: 100vh;
+        text-align: center;
+    }
+
+    /* Diminui a fonte do título para caber na tela do celular */
+    .glitch-text {
+        font-size: 2.5rem; /* Era 4.5rem, agora 2.5rem no celular */
+        margin-bottom: 20px;
+        line-height: 1.2;
+    }
+
+    /* Ajuste do subtítulo */
+    .sub-hero {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        padding-left: 15px;
+    }
+
+    /* Organiza os botões um em cima do outro */
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+        padding: 0 20px;
+    }
+
+    .btn-neon {
+        width: 100%; /* Botão ocupa a largura toda */
+        text-align: center;
+    }
+
+    /* Esconde elementos pesados ou que atrapalham no mobile */
+    .nav-links { display: none; } /* Esconde menu de links (mantém só o botão e logo) */
+    .strategy-visual { display: none; } /* Esconde ícone 3D gigante */
+    .robot-container { display: none; } /* Esconde o robô no celular para não cobrir texto */
+    
+    /* Ajuste das Grids para ficarem em 1 coluna */
     .construction-grid { grid-template-columns: 1fr; }
-    .hero-content h1 { font-size: 3rem; }
-    .nav-links { display: none; }
-    .strategy-visual { display: none; }
-    .stats-container { flex-direction: column; gap: 50px; }
-    .robot-container { display: none; } /* Robô some no mobile */
+    .stats-container { flex-direction: column; gap: 40px; }
+    
+    /* Ajuste do Header */
+    header {
+        padding: 15px 5%;
+    }
+    .logo { font-size: 1.4rem; }
 }
