@@ -240,3 +240,35 @@ footer { background: linear-gradient(to top, #020205, rgba(5, 5, 15, 0.95)); pad
     }
     .logo { font-size: 1.4rem; }
 }
+
+/* --- AJUSTE MOBILE (CELULAR) - COLE NO FINAL DO STYLE.CSS --- */
+@media (max-width: 900px) {
+    .hero {
+        padding-top: 160px;
+        align-items: flex-start;
+        min-height: 100vh;
+        text-align: center;
+    }
+    .glitch-text {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        line-height: 1.2;
+    }
+    .sub-hero {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        padding-left: 15px;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+        padding: 0 20px;
+    }
+    .btn-neon { width: 100%; text-align: center; }
+    .nav-links, .strategy-visual, .robot-container { display: none; }
+    .construction-grid { grid-template-columns: 1fr; }
+    .stats-container { flex-direction: column; gap: 40px; }
+    header { padding: 15px 5%; }
+    .logo { font-size: 1.4rem; }
+}
+
